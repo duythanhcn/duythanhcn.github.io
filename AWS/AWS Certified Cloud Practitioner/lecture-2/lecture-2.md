@@ -1,4 +1,4 @@
-AWS Global Infrastructure
+#AWS Global Infrastructure
 1. Introduction and Map Overview
 - Có mặt trên 190 nước
 - 69 Availability Zones
@@ -9,6 +9,8 @@ AWS Global Infrastructure
 
 
 ![AWS Global Infrastructure](resources/2.jpeg "AWS Global Infrastructure")
+
+
 2. Regions
 - Là khái niệm chỉ về các hệ thống server - Cluster vật lý của AWS: gồm nhiều server vật lý được xậy dựng thành các cụm độc lập nhưng có thể kết nối với nhau nằm ở các khu vực địa lý khác nhau. Ví dụ: Singapore, Japan.....
 - Mỗi Region sẽ có tối thiểu 2 Availability Zone
@@ -33,7 +35,5 @@ AWS Global Infrastructure
 - Chỉ phục vụ và access người Mỹ
 6. Tham khảo
 - [AWS Certified Cloud Practitioner Training](https://www.youtube.com/watch?v=3hLmDS179YE&t=11s "AWS Certified Cloud Practitioner Training").
-- [What is cloud computing](https://aws.amazon.com/vi/what-is-cloud-computing/ "What is cloud computing").
-- [GIẢI NGỐ VỀ CÁC KHÁI NIỆM IAAS, PAAS, SAAS TRONG CLOUD COMPUTING](https://toidicodedao.com/2018/10/23/so-sanh-iaas-paas-saas-la-gi/ "GIẢI NGỐ VỀ CÁC KHÁI NIỆM IAAS, PAAS, SAAS TRONG CLOUD COMPUTING").
 - [AWS Certified Cloud Practitioner](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf "(CLF-C01) Exam Guide").
 - [Region Maps and Edge Networks](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/?nc1=h_ls "Region Maps and Edge Networks").
