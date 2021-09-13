@@ -1,4 +1,4 @@
-#Exam 3
+# Exam 3
 
 1. You have been asked to set up a database in AWS that will require frequent updates.
 You know that you will need a reasonable amount of storage space but are unsure of the best option.

@@ -1,4 +1,4 @@
-#Exam 1
+# Exam 1
 
 1. Which AWS characteristics make AWS cost effective for a workload with dynamic user demand? (Choose
 two.)
