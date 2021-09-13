@@ -39,7 +39,7 @@ Which of the following AWS programs can a customer take advantage of to achieve 
 
 6. The use of what AWS feature or service allows companies to track and categorize spending on a detailed
 level?
-  A. Cost allocation tags
+  **A. Cost allocation tags**
   B. Consolidated billing
   C. AWS Budgets
   D. AWS Marketplace
