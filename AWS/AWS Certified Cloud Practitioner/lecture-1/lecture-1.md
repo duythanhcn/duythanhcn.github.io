@@ -1,16 +1,16 @@
 #Cloud Concepts
 1. What is Cloud Computing
-1.1. Điện toán đám mây là việc phân phối các tài nguyên CNTT theo nhu cầu qua Internet với chính sách thanh toán theo mức sử dụng. Thay vì mua, sở hữu và bảo trì các trung tâm dữ liệu và máy chủ vật lý, bạn có thể tiếp cận các dịch vụ công nghệ, như năng lượng điện toán, lưu trữ và cơ sở dữ liệu khi cần thiết
-1.2. On-premise vs Cloud 
-- on-premise:
-  + Tự xây dựng cơ sở hạ tầng: hệ thống server, data center, network, security...
-  + Cần người quản lý hệ thống
-  + Tự quản lý rủi ro về hệ thống
-  + Chi phí mở rộng/ Thất bại
-- Cloud:
-  + Không cần sở hữu 
-  + Không cần người vận hành hệ thống
-  + Khả năng mở rộng
+  1.1. Điện toán đám mây là việc phân phối các tài nguyên CNTT theo nhu cầu qua Internet với chính sách thanh toán theo mức sử dụng. Thay vì mua, sở hữu và bảo trì các trung tâm dữ liệu và máy chủ vật lý, bạn có thể tiếp cận các dịch vụ công nghệ, như năng lượng điện toán, lưu trữ và cơ sở dữ liệu khi cần thiết
+  1.2. On-premise vs Cloud 
+    - on-premise:
+      + Tự xây dựng cơ sở hạ tầng: hệ thống server, data center, network, security...
+      + Cần người quản lý hệ thống
+      + Tự quản lý rủi ro về hệ thống
+      + Chi phí mở rộng/ Thất bại
+    - Cloud:
+      + Không cần sở hữu 
+      + Không cần người vận hành hệ thống
+      + Khả năng mở rộng
 2. Advantages and Benefits of Cloud Computing
 
 ![Cloud Type Applications](resources/1.jpeg "Cloud Type Applications")
