@@ -1,2 +1,15 @@
+
+#
+# This file contains configuration flags to customize your site
+#
+
+# Name of your site (displayed in the header)
+name: The Lazy IT Guys
+
+# Short bio or description (displayed in the header)
+description: The Lazy IT Guys's Blog
+
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
 theme: jekyll-theme-midnight
-baseurl: "thelazyitguys.github.io"
+baseurl: "duythanhcn.github.io"
