@@ -25,7 +25,7 @@
   ### a. Root User
   Root User là User với quyền hạn cao nhất, bạn không thể bị giới hạn quyền, trừ khi Root User này thuộc 1 Ogranization nào đó. Vậy, làm sao để tạo 1 Root User? Đó là tạo 1 Account AWS, khi bạn đăng nhập AWS Account này với Email và Password thì đây chính là Root User. Vì là User có quyền hạn cao nhất nên AWS khuyến khích chúng ta không sử dụng User này để thực hiện các công việc với các services trên AWS. Thay vào đó, chúng ta sẽ uỷ thác và cấp quyền cho các IAM User. Một Root User có thể tạo ra nhiều IAM User và set một số quyền cho từng IAM User. Và bạn cũng nên tạo 1 IAM User với quyền là Adminitrator để tương tác với AWS thay vì sử dụng Root User.
   Ví dụ: dự án của bạn có 3 Developer:1 Dev làm về Backend tường tác với EC2 và RDS, 1 Dev Frontend làm FreactJs cần tương tác với S3 và 1 DevOps cần tương tác với tất cả service trên và Pipeline, ECS...Vậy, bạn chỉ cần tạo ra 3 IAM User với các quyền truy cập các service mà họ cần và cấp cho từng Dev để đảm bảo không ai đụng chạm đến ai.
-  Về vấn đề Root User có quyền cao nhất nhưng vẫn có thể bị giới hạn nếu thuộc 1 Ogranization, thì bạn có thể xem hình bên dưới để hiểu thêm nhé
+  Về vấn đề Root User có quyền cao nhất nhưng vẫn có thể bị giới hạn nếu thuộc 1 Ogranization, thì bạn có thể xem hình bên dưới để hiểu thêm nhé. Mỗi OU trong hình chính là 1 Root User(AWS Account được add vào 1 Ogranization)
    ![Ogranization](resources/8.png "Ogranization")
   Các bạn khi nhận AWS Account nên thiết lập bảo mật MFA
     ![ROOT](resources/6.jpg "ROOT")
@@ -45,7 +45,10 @@
   ![group](resources/4.png "group")
 
 ## 5. Role
-  Mọi quyền hạn đều gắn với User, vậy 
+  Mọi quyền hạn đều gắn với User. Tuy nhiên, trong thực tế, bạn có thể sẽ gặp trường hợp, 1 User Backend thao tác với EC2 và từ EC2 cần upload file lên S3. Trường hợp này bạn sẽ làm gì? Attach quyền S3 cho User và dùng User Credentials để thực hiện upload lên S3. Điều này có nghĩa, bạn cần phải để lại thông tin User Credentials trên EC2 để code của bạn có thể làm việc. Như vậy, quả là không an toàn bởi vì 1 member nào đó trong team có thể có được User Credentials của bạn để thực hiện những thao tác không được phép. Đây chính là 1 trong những lý do có sự xuất hiện của Role. 
+  Role là 1 tập hợp các quyền hạn đối với AWS Service. Tuy nhiên, khác với IAM User, các quyền hạn của Role không được assign cho cụ thể 1 User hay Group nào. Mà người ta giả định rằng, sẽ có một IAM User, 1 service nào đó hoặc 1 User không thuộc AWS(thông qua 3rd party) cần dùng và tạo ra nó.
+  Như ví dụ ở trên, bạn không cần lưu 1 User Credentials trên EC2 để có thể thực hiện việc upload dữ liệu lên S3. Thay vào đó, bạn set cho EC2 với Role được phép upload lên S3. Như vậy, khi bạn set Role, EC2 khi thực hiện thao tác với S3 sẽ được cấp 1 Short-Term Credentials có giá trị default là 1 giờ, sau khi hết hạn nó sẽ bị thu hồi. Tức là bạn cho phép access đến AWS service trong ngắn hạn và không phải cấp 1 Long-Term Credentials.
+   ![Role](resources/10.png "Role")
 
 ## 7. Tham khảo
 - [AWS Certified Cloud Practitioner Training](https://www.youtube.com/watch?v=3hLmDS179YE&t=11s "AWS Certified Cloud Practitioner Training").
