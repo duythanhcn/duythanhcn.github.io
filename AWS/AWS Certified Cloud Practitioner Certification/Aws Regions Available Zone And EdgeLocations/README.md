@@ -12,10 +12,11 @@
 
 
 ## 2. Regions
-- Là khái niệm chỉ về các hệ thống server - Cluster vật lý của AWS: gồm nhiều server vật lý được xậy dựng thành các cụm độc lập nhưng có thể kết nối với nhau nằm ở các khu vực địa lý khác nhau. Ví dụ: Singapore, Japan.....
+- Là khái niệm chỉ về các hệ thống server - Cluster vật lý của AWS: gồm nhiều server vật lý được xậy dựng thành các cụm độc lập nhưng có thể kết nối với nhau, nằm ở các khu vực địa lý khác nhau. Ví dụ: Singapore, Japan.....
 - Mỗi Region sẽ có tối thiểu 2 Availability Zone
 - Region giúp việc Go Global của ứng dụng một cách dễ dàng
-- Mỗi Region có các rule chung nhưng cũng sẽ có rule riêng tuy vào vị trí địa lý và cũng có mức phí khác nhau
+- Mỗi Region có các rule chung nhưng cũng sẽ có rule riêng tuy vào vị trí địa lý và cũng có mức phí hoặc services khác nhau
+- Ngoài việc Region giúp user connect tới ứng dụng nhanh hơn, nó còn giúp chúng ta đảm bảo 1 phần nào đó về các chính sách pháp lý của nước sở tại.
 ## 3. Availability Zones - AZs
 - Mỗi AZ sẽ thuộc 1 Region nào đó
 - Có tối thiểu 2 AZ trong 1 Region
@@ -24,7 +25,7 @@
 - Giữa các AZ sẽ luôn có sự động bộ với độ trễ thấp
 ## 4. Edge Locations
 - Là các Data Center được vận hành bởi các đối tác của AWS
-- CÓ thể kết nối trực tiếp đến network của AWS
+- Có thể kết nối trực tiếp đến network của AWS
 - Phục vụ cho các request tới các dịch vụ như: CloudFront, Route 53
 - Nhiệm vụ các Egde:
   + Giảm độ trễ khi request tới các resource của AWS bất kể bạn đang ở đâu cho dù resource không nằm tại vùng địa lý bạn sinh sống

@@ -36,15 +36,18 @@
   - Chi phí tính theo sử dụng, không cần trả trước, không cần cam kết, dùng bao nhiêu trả bấy nhiêu, tính theo giờ hoặc giây sử dụng
   - Ưu điểm: Tuỳ chọn giá cả linh động, không cần thanh toán trước, phù hợp với các xử lý không thể tính toán được resources 
   - Nhược điểm: đắt đỏ và khó kiểm soát được phí sử dụng
+  - Thường sử dụng cho các ứng dụng không thể xác định trước mức độ sử dụng, yêu cầu xử lý liên tục không gián đoạn, trong short-term
   #### b. Spot
   - Là một hình thức đấu giá available resource của AWS. Bạn có thể sử dụng instance cấu hình cao nhưng với chi phí chỉ bằng 90% On-Demand. Tuy nhiên, instance của bạn có thể bị thu hồi nếu có người bid giá cao hơn. Và AWS cũng cung cấp cơ chế Hybernate để lưu trữ cho trường hợp này và bạn sẽ nhận được thống báo thu hồi trước 2 phút.
   - Ưu điểm: có thể sử dụng cấu hình cao với chi phí thấp
   - Nhược điểm: Phải đấu giá với nhiều người, instance có thể bị thu hồi bất cứ lúc nào, đòi hỏi có cơ chế quản lý đặc biệt trong trường hợp bị thu hồi
+  - Nếu instance bị thu hồi bơi AWS, không cần phải trả phí sử dụng. Nhưng nếu bạn là người kết thúc, bạn vẫn phải trả phí sử dụng.
   #### c. Reserved
   ![Reserved Instances](resources/6.png "Reserved Instances")
-  - Reserved Instances(RIs) là một hình thức đặt chỗ trước với cam kết sử dụng từ 1-3 năm để được mức giá rẻ hơn. Ngoài ra, có thể tuỳ chọn hình thức thánh toán để có mức phí rẻ hơn: No Upfront, Partial Upfront và All Upfront Về cơ bản có 2 hình thức Reserved:
+  - Reserved Instances(RIs) là một hình thức đặt chỗ trước với cam kết sử dụng từ 1-3 năm để được mức giá rẻ hơn. Ngoài ra, có thể tuỳ chọn hình thức thánh toán để có mức phí rẻ hơn: No Upfront, Partial Upfront và All Upfront Về cơ bản có 3 hình thức Reserved:
     + Standard RIs: Là loại fixed cấu hình và tiết kiệm tới 72% so với On-Demand.
     + Convertible RIs: Có thể thay đổi cấu hình và tiết kiêm tới 54% so với On-Demand.
+    + Scheduled: Là loại đặt trước với thời gian xác định.
   - Ưu điểm: Chi phí thấp, dễ control hơn so với Spot
   - Nhược điểm: Quản lý khó khăn hơn so với On-Demand, phải trả phí cả khi không sử dụng, không tôi ưu được hệ thống do fixed cấu hình.
   #### d. Saving
@@ -69,9 +72,15 @@
   - Đối với Dedicated Host, khách hàng có thể sử dụng software licenses của mình để tiết kiệm chi phí hay đảm bảo các compliance đặc thù. Và hoàn toàn control server như On-Premise như có thể tạo bao nhiêu instance(máy ảo) tuỳ ý và handle chúng.
   ![ Dedicated Host](resources/8.png "Dedicated Host")
 
-*So sánh về giá của các loại EC2:
-  ![EC2 Price](resources/9.webp "EC2 Price")
-## 3. Tham khảo
+## 3. Tổng kết
+![EC2 Price](resources/9.webp "EC2 Price")
+Về cơ bản, EC2 được chia làm 4 model, chi tiết các model đã được đề cập phía trên
+  - On-Demand
+  - Reserved Isntances(RI)
+  - Spot
+  - Dedicated - Dedicated Hosting
+
+## 4. Tham khảo
 - [AWS Certified Cloud Practitioner Training](https://www.youtube.com/watch?v=3hLmDS179YE&t=11s "AWS Certified Cloud Practitioner Training").
 - [AWS Certified Cloud Practitioner](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Exam-Guide.pdf "(CLF-C01) Exam Guide").
 - [AWS Pricing in 2020: Overview, Principles and Examples [EC2, S3, Lambda]](https://rnd-solutions.net/2020/01/17/aws-pricing-in-2020-overview-principles-and-examples/ "AWS Pricing in 2020: Overview, Principles and Examples [EC2, S3, Lambda]").

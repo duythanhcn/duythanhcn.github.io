@@ -36,7 +36,7 @@ Cloud Scope
 ![Cloud Computing Deployment Models](resources/4.png "Cloud Computing Deployment Models")
 
 Việc triển khai các mô hình Cloud Computing hiện nay về cơ bản có thể chia làm 3 hình thức
-- Sử dụng các dịch vụ của Cloud Providers:
+- Sử dụng các dịch vụ của Cloud Providers
 - Kết hợp
 - Tự xây dựng
 
