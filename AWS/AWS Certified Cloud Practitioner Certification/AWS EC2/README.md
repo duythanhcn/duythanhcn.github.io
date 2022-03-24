@@ -1,4 +1,4 @@
-# AWS EC2
+# Amazon Elastic Compute Cloud (EC2)
 
 ## 1. What is EC2?
   - EC2 - Elastic Compute Cloud: là một nền tảng(dịch vụ) cung cấp máy chủ ảo(Cloud Computing) trên hệ thống AWS
